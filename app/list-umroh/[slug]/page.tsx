@@ -182,10 +182,11 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
               hotelMadinah={hotelMadinah}
             />
           </div>
-          
-          <InformasiTravel/>
+
+          <InformasiTravel />
         </div>
       </div>
+      <div className="pt-[100px]"></div>
     </div>
   );
 }
