@@ -81,7 +81,7 @@ export default function TagCard({ pkg, hotelMekkah, hotelMadinah }: TagCardProps
           </div>
 
           <Link
-            href={`https://wa.me/085234567890?text=Halo, saya ingin bertanya tentang paket ${pkg.title}`}
+            href={`https://wa.me/+6285760143516?text=Halo, saya ingin bertanya tentang paket ${pkg.title}`}
             target="_blank"
             className="p-4 bg-gradient-to-b from-[#1b5b70] to-[#053446] rounded-md shadow-sm flex items-center justify-center hover:from-[#07465c] hover:to-[#002a3d] transition-colors text-white gap-2 font-bold text-[15px]"
           >
