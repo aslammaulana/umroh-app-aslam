@@ -48,9 +48,15 @@ export default function PaketUmrohList() {
   return (
     <div className="bg-gray-50 min-h-screen pb-20">
       <div className="bg-blue-700 py-16 px-8 text-center text-white">
+         <Link
+                href="/dashboard"
+                className="flex items-center justify-center gap-2 rounded-md px-6 py-3 text-white font-semibold text-[14px] bg-[#ffffff5b] hover:bg-[#2b5844] transition-colors"
+              >
+                Dashboard
+              </Link>
         <h1 className="text-4xl font-bold mb-4">Pilihan Paket Umroh</h1>
         <p className="text-blue-100 max-w-2xl mx-auto">
-          Temukan perjalanan ibadah yang nyaman dan aman bersama kami dengan berbagai pilihan fasilitas terbaik.
+          Ayo Temukan perjalanan ibadah yang nyaman dan aman bersama kami dengan berbagai pilihan fasilitas terbaik.
         </p>
       </div>
 
