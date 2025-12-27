@@ -33,7 +33,7 @@ export const hotels: Hotel[] = [
     id: "ritz-madinah",
     name: "Hotel Ritz Madinah",
     city: "Madinah",
-    image: "/Hotel/Naem.jpg",
+    image: "/Hotel/ritz.jpg",
     rate: 4,
     location: "Madinah",
     description:
@@ -43,7 +43,7 @@ export const hotels: Hotel[] = [
     id: "elaf-kinda",
     name: "Elaf Kinda Hotel",
     city: "Mekkah",
-    image: "/Hotel/Kinda.jpg",
+    image: "/Hotel/elaf.jpg",
     rate: 3,
     location: "Mekkah",
     description:
