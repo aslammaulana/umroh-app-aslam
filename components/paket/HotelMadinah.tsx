@@ -62,7 +62,7 @@ export default function HotelMadinah({
               <FaLocationDot size={18} />
             </div>
             <div>
-              <p className="text-gray-500 text-xs">Lokasi</p>
+              <p className="text-gray-500 ">Lokasi</p>
               <p className="font-bold">{location}</p>
             </div>
           </div>
@@ -73,8 +73,8 @@ export default function HotelMadinah({
               <MdDocumentScanner size={18} />
             </div>
             <div className="flex-1">
-              <p className="text-gray-500 text-xs">Info Detail</p>
-              <p className="font-medium text-gray-700 leading-relaxed text-sm">
+              <p className="text-gray-500 ">Info Detail</p>
+              <p className="font-medium text-gray-700 leading-relaxed">
                 {description}
               </p>
             </div>

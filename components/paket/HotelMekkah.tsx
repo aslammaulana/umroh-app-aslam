@@ -24,11 +24,11 @@ export default function HotelMekkah({
     <div className="w-full">
       {/* Header Section */}
       <div className="mt-[30px]">
-        <div className="flex items-center gap-5">
-          <div className="p-3 bg-[#003d57] rounded-t-lg text-white">
-            <FaBed size={20} />
+        <div className="flex items-center gap-5 rounded-tl-md">
+          <div className="p-3 bg-[#003d57] rounded-t-md text-white">
+            <FaBed />
           </div>
-          <p className="font-bold text-[#003d57] uppercase tracking-wide">
+          <p className="font-bold text-[#003d57] tracking-wide">
             Hotel
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function HotelMekkah({
               <FaLocationDot size={18} />
             </div>
             <div>
-              <p className="text-gray-500 text-xs">Lokasi</p>
+              <p className="text-gray-500 ">Lokasi</p>
               <p className="font-bold">{location}</p>
             </div>
           </div>
@@ -85,8 +85,8 @@ export default function HotelMekkah({
               <MdDocumentScanner size={18} />
             </div>
             <div className="flex-1">
-              <p className="text-gray-500 text-xs">Info Detail</p>
-              <p className="font-medium text-gray-700 leading-relaxed text-sm">
+              <p className="text-gray-500 ">Info Detail</p>
+              <p className="font-medium text-gray-700 leading-relaxed ">
                 {description}
               </p>
             </div>

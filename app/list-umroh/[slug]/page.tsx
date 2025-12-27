@@ -15,6 +15,7 @@ import HotelMekkah from "@/components/paket/HotelMekkah";
 import TagCard from "@/components/paket/TagCard";
 import { Package, ItineraryItem, Hotel } from "@/types";
 import InformasiTravel from "@/components/paket/InformasiTravel";
+import HeroCard from "@/components/paket/HeroCard";
 
 
 
@@ -103,43 +104,19 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
       <div className="relative w-full md:w-[87%] p-3 md:p-0 mx-auto flex flex-col md:flex-row items-start justify-between gap-10 py-20 mt-20">
         {/* Kiri */}
         <div className="flex flex-col justify-center basis-[70%]">
-          <div className="rounded-md p-5 shadow-md border-2 border-[#003d57] flex flex-col gap-5 bg-white">
-            <Image
-              src={pkg.image}
-              alt={pkg.title}
-              width={1200}
-              height={400}
-              className="w-full h-auto object-contain rounded-md"
-            />
-            {/* Grid Info */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              <div className="p-4 bg-[#e4ebff] rounded-md space-y-1">
-                <p className="text-[14px]">Durasi</p>
-                <p className="font-bold text-[15px]">{pkg.durasi} Hari</p>
-              </div>
-              <div className="p-4 bg-[#e4ebff] rounded-md space-y-1">
-                <p className="text-[14px]">Maskapai</p>
-                <p className="font-bold text-[15px]">{pkg.maskapai}</p>
-              </div>
-              <div className="p-4 bg-[#e4ebff] rounded-md space-y-1">
-                <p className="text-[14px]">Keberangkatan</p>
-                <p className="font-bold text-[15px]">
-                  {new Date(pkg.tanggal_keberangkatan).toLocaleDateString("id-ID", {
-                    day: "2-digit",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </p>
-              </div>
-              <div className="p-4 bg-[#003d57] rounded-md flex items-center justify-center cursor-pointer hover:bg-[#002a3d] transition-colors">
-                <p className="font-bold text-[15px] text-white">Download Flyer</p>
-              </div>
-            </div>
-          </div>
+          <HeroCard
+            pkg={pkg}
+            onDownloadFlyer={() => {
+              console.log("Download flyer:", pkg.title);
+              // nanti bisa isi:
+              // window.open(pkg.flyer_url)
+            }}
+          />
+
 
           <div className="mt-[30px]">
             <div className="flex justify-start items-center gap-5">
-              <div className="p-3 bg-[#003d57] rounded-lg rounded-br-none rounded-bl-none text-white">
+              <div className="p-3 bg-[#003d57] rounded-md rounded-br-none rounded-bl-none text-white">
                 <FaInfoCircle />
               </div>
               <p className="font-bold text-[#003d57]">Informasi Paket</p>
@@ -174,14 +151,13 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
 
         {/* Kanan  */}
         <div className="basis-[30%] flex flex-col gap-5">
-          <div className="flex flex-col gap-6  shadow-md border-2 border-[#003d57] p-6 bg-white rounded-md">
+          
             {/* Tampilkan TagCard.tsx */}
             <TagCard
               pkg={pkg}
               hotelMekkah={hotelMekkah}
               hotelMadinah={hotelMadinah}
             />
-          </div>
 
           <InformasiTravel />
         </div>

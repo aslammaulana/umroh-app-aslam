@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FaHeadset } from 'react-icons/fa';
 import { navLinks } from './Navlink';
+import { Button } from "@/components/selia/button";
 
 export default function NavbarDekstop() {
   const logoSrc = "/NawayaAssets/LogoNawaya.svg";
@@ -33,9 +34,8 @@ export default function NavbarDekstop() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white shadow-sm hidden md:block transition-transform duration-300 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`sticky top-0 z-50 bg-white shadow-sm hidden md:block transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"
+        }`}
     >
       <nav className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
@@ -64,11 +64,13 @@ export default function NavbarDekstop() {
           <Link
             href={contactUrl}
             target="_blank"
-            className="flex items-center gap-2 rounded-full px-6 py-3 text-white font-semibold text-[14px] bg-[#418064] hover:bg-[#2b5844] transition-colors"
+            className="px-5 py-3 bg-gradient-to-b from-[#1b5b70] to-[#053446] rounded-md shadow-sm flex items-center justify-center hover:from-[#07465c] hover:to-[#002a3d] transition-colors text-white gap-2 font-bold text-[14px]"
           >
             <FaHeadset />
             Hubungi Kami
           </Link>
+          
+
         </div>
       </nav>
     </header>
