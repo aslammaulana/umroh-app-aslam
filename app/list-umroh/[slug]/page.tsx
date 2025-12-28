@@ -92,7 +92,7 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
       <Navbar />
 
       {/* Hero */}
-      <HeroHeader title={pkg.title} />
+      {/* <HeroHeader title={pkg.title} /> */}
 
       <div className="relative w-full md:w-[87%] p-3 md:p-0 mx-auto flex flex-col md:flex-row items-start justify-between gap-10 py-0 mt-3 md:mt-10">
         {/* Kiri */}
