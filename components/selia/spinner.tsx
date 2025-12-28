@@ -14,7 +14,7 @@ export function Spinner({ ...props }: React.ComponentProps<'svg'>) {
       strokeLinejoin="round"
       data-slot="spinner"
       {...props}
-      className={cn('size-4 animate-spin', props.className)}
+      className={cn('size-4 animate-spin text-[#1447e6]', props.className)}
     >
       <path d="M21 12a9 9 0 1 1-6.219-8.56" />
     </svg>
