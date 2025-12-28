@@ -4,7 +4,7 @@ import Deskripsi from "@/components/paket/Deskripsi";
 import HargaTermasuk from "@/components/paket/HargaTermasuk";
 import HargaTidakTermasuk from "@/components/paket/HargaTidakTermasuk";
 import Itinerary from "@/components/paket/Itinerary";
-import NavbarDekstop from "@/components/theme/NavbarDekstop";
+import NavbarDekstop from "@/components/theme/Navbar/NavbarDekstop";
 import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 import { useEffect, useState, use } from "react";
@@ -16,6 +16,8 @@ import TagCard from "@/components/paket/TagCard";
 import { Package, ItineraryItem, Hotel } from "@/types";
 import InformasiTravel from "@/components/paket/InformasiTravel";
 import HeroCard from "@/components/paket/HeroCard";
+import HeroHeader from "@/components/paket/HeroHeader";
+import Navbar from "@/components/theme/Navbar/Navbar";
 
 
 
@@ -83,23 +85,10 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
 
   return (
     <div className="bg-[#f2f4f8]">
-      <NavbarDekstop />
+      <Navbar />
 
       {/* Hero */}
-      <div className="relative h-[300px] text-white overflow-hidden">
-        <Image
-          src="/NawayaAssets/umi-hero.png"
-          alt="hero image"
-          fill
-          className="object-center object-cover w-full h-full"
-        />
-        <div className="absolute inset-0 bg-[#072331] opacity-80"></div>
-        <div className="relative flex flex-col justify-center items-center h-full text-center">
-          <h1 className="text-[20px] md:text-[35px] font-extrabold leading-tight mb-3 capitalize">
-            {pkg.title}
-          </h1>
-        </div>
-      </div>
+      <HeroHeader title={pkg.title} />
 
       <div className="relative w-full md:w-[87%] p-3 md:p-0 mx-auto flex flex-col md:flex-row items-start justify-between gap-10 py-0 mt-3 md:mt-10">
         {/* Kiri */}

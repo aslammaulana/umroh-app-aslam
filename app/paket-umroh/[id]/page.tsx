@@ -4,7 +4,7 @@ import Deskripsi from "@/components/paket/Deskripsi";
 import HargaTermasuk from "@/components/paket/HargaTermasuk";
 import HargaTidakTermasuk from "@/components/paket/HargaTidakTermasuk";
 import Itinerary from "@/components/paket/Itinerary";
-import NavbarDekstop from "@/components/theme/NavbarDekstop";
+import NavbarDekstop from "@/components/theme/Navbar/NavbarDekstop";
 import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 import { useEffect, useState, use } from "react"; // Tambahkan use
