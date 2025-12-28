@@ -101,7 +101,7 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
         </div>
       </div>
 
-      <div className="relative w-full md:w-[87%] p-3 md:p-0 mx-auto flex flex-col md:flex-row items-start justify-between gap-10 py-20 mt-20">
+      <div className="relative w-full md:w-[87%] p-3 md:p-0 mx-auto flex flex-col md:flex-row items-start justify-between gap-10 py-0 mt-3 md:mt-10">
         {/* Kiri */}
         <div className="flex flex-col justify-center basis-[70%]">
           <HeroCard
@@ -113,6 +113,14 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
             }}
           />
 
+          <div className="md:hidden mt-5">
+            <TagCard
+              pkg={pkg}
+              hotelMekkah={hotelMekkah}
+              hotelMadinah={hotelMadinah}
+            />
+
+          </div>
 
           <div className="mt-[30px]">
             <div className="flex justify-start items-center gap-5">
@@ -123,6 +131,8 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
             </div>
             <div className="border-t-2 border-[#003d57]"></div>
           </div>
+
+
 
           <Deskripsi deskripsi={pkg.deskripsi} />
           <HargaTermasuk />
@@ -151,13 +161,15 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
 
         {/* Kanan  */}
         <div className="basis-[30%] flex flex-col gap-5">
-          
-            {/* Tampilkan TagCard.tsx */}
+
+          <div className="hidden lg:block ">
             <TagCard
               pkg={pkg}
               hotelMekkah={hotelMekkah}
               hotelMadinah={hotelMadinah}
             />
+
+          </div>
 
           <InformasiTravel />
         </div>
