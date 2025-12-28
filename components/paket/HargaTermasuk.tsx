@@ -21,7 +21,7 @@ function HargaItem({ text }: { text: string }) {
   return (
     <div className="flex items-start gap-3 py-2">
       <FaCheckCircle className="text-[#003d57] mt-[2px]" />
-      <p className="text-[15px]">{text}</p>
+      <p className="text-[14px]">{text}</p>
     </div>
   );
 }
