@@ -84,7 +84,7 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
   if (!pkg) return <div className="min-h-screen flex items-center justify-center">Paket tidak ditemukan.</div>;
 
   return (
-    <div className="bg-[#f2f4f8]">
+    <div className="bg-[#f6f7fa]">
       <Navbar />
 
       {/* Hero */}
