@@ -18,7 +18,8 @@ import InformasiTravel from "@/components/paket/InformasiTravel";
 import HeroCard from "@/components/paket/HeroCard";
 import HeroHeader from "@/components/paket/HeroHeader";
 import Navbar from "@/components/theme/Navbar/Navbar";
-
+import { CgSpinner } from "react-icons/cg";
+import { Spinner } from '@/components/selia/spinner';
 
 
 
@@ -80,7 +81,10 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
     fetchItinerary();
   }, [pkg?.id]);
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center">Memuat detail paket...</div>;
+  if (loading) return <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+    <Spinner className="size-10" />
+    <p className="">Memuat detail paket...</p>
+  </div>;
   if (!pkg) return <div className="min-h-screen flex items-center justify-center">Paket tidak ditemukan.</div>;
 
   return (

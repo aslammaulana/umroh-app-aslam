@@ -3,6 +3,7 @@
 import { supabase } from '@/lib/supabase';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { Spinner } from './selia/spinner';
 
 type Package = {
   id: number;
@@ -26,9 +27,9 @@ export default function PaketUmrohList() {
       // Memastikan slug juga ikut terambil dari database
       const { data, error } = await supabase
         .from('packages')
-        .select('*') 
+        .select('*')
         .order('created_at', { ascending: false });
-      
+
       if (!error) {
         setPackages(data || []);
       }
@@ -38,22 +39,21 @@ export default function PaketUmrohList() {
     fetchPackages();
   }, []);
 
-  if (loading) return (
-    <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-      <p className="text-gray-500 font-medium">Mencari paket terbaik untuk Anda...</p>
-    </div>
-  );
+  if (loading) return <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+    <Spinner className="size-10" />
+    <p className="">Assalamualaikum</p>
+
+  </div>;
 
   return (
     <div className="bg-gray-50 min-h-screen pb-20">
       <div className="bg-blue-700 py-16 px-8 text-center text-white">
-         <Link
-                href="/dashboard"
-                className="flex items-center justify-center gap-2 rounded-md px-6 py-3 text-white font-semibold text-[14px] bg-[#ffffff5b] hover:bg-[#2b5844] transition-colors"
-              >
-                Dashboard
-              </Link>
+        <Link
+          href="/dashboard"
+          className="flex items-center justify-center gap-2 rounded-md px-6 py-3 text-white font-semibold text-[14px] bg-[#ffffff5b] hover:bg-[#2b5844] transition-colors"
+        >
+          Dashboard
+        </Link>
         <h1 className="text-4xl font-bold mb-4">Pilihan Paket Umroh</h1>
         <p className="text-blue-100 max-w-2xl mx-auto">
           Ayo Temukan perjalanan ibadah yang nyaman dan aman bersama kami dengan berbagai pilihan fasilitas terbaik.
@@ -70,9 +70,9 @@ export default function PaketUmrohList() {
             {packages.map(pkg => (
               <div key={pkg.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
                 <div className="relative h-56 bg-gray-200 overflow-hidden">
-                  <img 
-                    src={pkg.image || 'https://via.placeholder.com/400x300?text=No+Image'} 
-                    alt={pkg.title} 
+                  <img
+                    src={pkg.image || 'https://via.placeholder.com/400x300?text=No+Image'}
+                    alt={pkg.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4 bg-yellow-500 text-black font-bold text-xs px-3 py-1 rounded-full shadow-sm">
@@ -87,7 +87,7 @@ export default function PaketUmrohList() {
                       {'★'.repeat(pkg.hotel_rate)}
                     </div>
                   </div>
-                  
+
                   <div className="mb-4">
                     <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Harga Paket</p>
                     <p className="text-blue-600 font-black text-2xl">
@@ -107,7 +107,7 @@ export default function PaketUmrohList() {
                   </div>
 
                   {/* 2. Ubah Link dari ID ke Slug */}
-                  <Link 
+                  <Link
                     href={`/list-umroh/${pkg.slug}`}
                     className="block w-full text-center py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-colors shadow-lg shadow-blue-100"
                   >
