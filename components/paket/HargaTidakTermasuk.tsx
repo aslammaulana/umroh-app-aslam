@@ -17,13 +17,13 @@ function HargaItem({ text }: { text: string }) {
 }
 
 export default function HargaTidakTermasuk() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="mt-8">
       {/* Header */}
       <div 
-        className="flex items-center justify-between gap-5 cursor-pointer rounded-tl-md border-t-[2px] border-r-[2px] border-[#b1b1b136] pr-3" 
+        className="flex items-center justify-between gap-5 cursor-pointer rounded-tl-md  border-r-[2px] border-[#b1b1b136] pr-3" 
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex items-center gap-5">

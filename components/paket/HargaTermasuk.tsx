@@ -27,16 +27,16 @@ function HargaItem({ text }: { text: string }) {
 }
 
 export default function HargaTermasuk() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="mt-8">
       {/* Header */}
       <div 
-        className="flex items-center justify-between gap-5 cursor-pointer border-t-[2px] rounded-tl-md border-r-[2px] border-[#b1b1b136] pr-3" 
+        className="flex items-center justify-between gap-5 cursor-pointer  rounded-tl-md border-r-[2px] border-[#b1b1b136] pr-3" 
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5"> 
           <div className="p-3 bg-[#088842] rounded-tl-md rounded-tr-md text-white">
             <FaCheckCircle />
           </div>

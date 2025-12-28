@@ -24,11 +24,11 @@ export default function HotelMadinah({
     <div className="w-full">
       
       {/* Card */}
-      <div className="bg-white p-5 shadow-md text-[15px] mt-2 flex flex-col md:flex-row gap-6">
+      <div className="bg-white p-5 shadow-md text-[15px] mt-1 flex flex-col md:flex-row gap-6">
         {/* Image */}
         <div className="w-full md:basis-[40%]">
           {/* Image */}
-          <div className="w-[270px] h-[300px] rounded-md overflow-hidden shadow-sm border">
+          <div className="w-[270px] h-[120px] md:h-[300px] rounded-sm overflow-hidden shadow-sm ">
             <Image
               src={image}
               alt={name}
@@ -43,7 +43,7 @@ export default function HotelMadinah({
         {/* Info */}
         <div className="w-full md:basis-[60%] flex flex-col gap-5">
           <div>
-            <h2 className="text-[22px] font-bold text-[#003d57] leading-tight">
+            <h2 className="text-[16px] font-bold text-[#003d57] leading-tight">
               {name}
             </h2>
 
@@ -61,7 +61,7 @@ export default function HotelMadinah({
             <div className="p-2 bg-[#003d57]/10 rounded-lg text-[#003d57]">
               <FaLocationDot size={18} />
             </div>
-            <div>
+            <div className="text-[13px] space-y-1">
               <p className="text-gray-500 ">Lokasi</p>
               <p className="font-bold">{location}</p>
             </div>
@@ -72,7 +72,7 @@ export default function HotelMadinah({
             <div className="p-2 bg-[#003d57]/10 rounded-lg text-[#003d57]">
               <MdDocumentScanner size={18} />
             </div>
-            <div className="flex-1">
+            <div className="flex-1 text-[13px] space-y-1">
               <p className="text-gray-500 ">Info Detail</p>
               <p className="font-medium text-gray-700 leading-relaxed">
                 {description}

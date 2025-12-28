@@ -20,6 +20,7 @@ import HeroHeader from "@/components/paket/HeroHeader";
 import Navbar from "@/components/theme/Navbar/Navbar";
 import { CgSpinner } from "react-icons/cg";
 import { Spinner } from '@/components/selia/spinner';
+import HotelSection from "@/components/paket/Hotel";
 
 
 
@@ -131,24 +132,8 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
           <HargaTermasuk />
           <HargaTidakTermasuk />
           <Itinerary itineraries={itineraries} />
-
-          {hotelMekkah && (
-            <HotelMekkah
-              name={hotelMekkah.name}
-              image={hotelMekkah.image}
-              rate={hotelMekkah.rate}
-              location={hotelMekkah.location}
-              description={hotelMekkah.description}
-            />
-          )}
-          {hotelMadinah && (
-            <HotelMadinah
-              name={hotelMadinah.name}
-              image={hotelMadinah.image}
-              rate={hotelMadinah.rate}
-              location={hotelMadinah.location}
-              description={hotelMadinah.description}
-            />
+          {pkg && (
+            <HotelSection pkg={pkg} />
           )}
         </div>
 
