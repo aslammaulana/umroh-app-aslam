@@ -23,8 +23,8 @@ export default function NavbarMobile() {
 
     return (
         <div className='lg:hidden sticky top-0 inset-x-0 z-20 bg-white shadow-md'>
-            <div className='max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20'>
-                <Link href="/" className="relative flex items-center gap-2 w-[230px] h-12">
+            <div className='max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-15'>
+                <Link href="/" className="relative flex items-center gap-2 w-[180px] h-12">
                     <Image
                         src={logoSrc}
                         alt="Logo"
@@ -52,7 +52,7 @@ export default function NavbarMobile() {
                         href="/"
                         // Tambahkan onClick untuk menutup menu
                        
-                        className="font-medium hover:bg-[#020f21] hover:text-white "
+                        className="font-medium hover:bg-[#22416d] hover:text-white "
                     />
                     <Button
                         icon={<HiFolderOpen size={15} className='fill-current w-4 h-4 mr-3' />}
@@ -61,7 +61,7 @@ export default function NavbarMobile() {
                         href="/#paket" 
                         // Tambahkan onClick untuk menutup menu
                       
-                        className="mt-2 font-medium hover:bg-[#020f21] hover:text-white"
+                        className="mt-2 font-medium hover:bg-[#22416d] hover:text-white"
                     />
                     <Button
                         icon={<HiOutlineUser size={15} className='fill-current w-4 h-4 mr-3' />}
@@ -69,7 +69,7 @@ export default function NavbarMobile() {
                         href="/#galeri"
                         // Tambahkan onClick untuk menutup menu
                       
-                        className="mt-2 font-medium hover:bg-[#020f21] hover:text-white"
+                        className="mt-2 font-medium hover:bg-[#22416d] hover:text-white"
                     />
                 </div>
             )}

@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({ icon, text, href, className = '', onCli
     <Link href={href} className="w-full">
       <button
         onClick={onClick} // jalankan di sini
-        className={`flex items-center w-full p-3 rounded-lg font-medium bg-[#dce9e3] text-[15px] transition-colors hover:bg-[#22416d] hover:text-white ${className}`}
+        className={`flex items-center w-full p-3 rounded-sm font-medium bg-[#dddce9] text-[15px] transition-colors hover:text-white ${className}`}
       >
         {icon && <span className="mr-2">{icon}</span>}
         <span>{text}</span>
