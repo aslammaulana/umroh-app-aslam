@@ -138,7 +138,7 @@ export default function Page({ params }: { params: Promise<{ slug: string }> | {
         </div>
 
         {/* Kanan  */}
-        <div className="basis-[30%] flex flex-col gap-5">
+        <div className="basis-[30%] flex flex-col gap-5 w-full">
 
           <div className="hidden lg:block ">
             <TagCard

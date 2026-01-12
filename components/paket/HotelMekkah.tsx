@@ -26,7 +26,7 @@ export default function HotelMekkah({
         
         {/* Image */}
         <div className="w-full md:basis-[40%]">
-          <div className="w-[270px] h-[120px] md:h-[300px] rounded-sm overflow-hidden">
+          <div className="w-[270px] h-[120px] md:h-[300px] rounded-sm overflow-hidden border-1 border-[#cccccc]">
             <Image
               src={image}
               alt={name}

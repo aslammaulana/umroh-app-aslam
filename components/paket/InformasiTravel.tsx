@@ -24,7 +24,7 @@ function InfoItem({ icon: Icon, label, value }: InfoItemProps) {
 
 export default function InformasiTravel() {
   return (
-    <div className="flex flex-col shadow-md border-2 border-[#003d57] text-white p-6 bg-[#003d57] rounded-md">
+    <div className="flex flex-col  shadow-md border-2 border-[#003d57] text-white p-6 bg-[#003d57] rounded-md">
       <p className="font-bold mb-4">INFORMASI TRAVEL</p>
 
       <InfoItem

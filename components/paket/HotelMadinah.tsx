@@ -28,7 +28,7 @@ export default function HotelMadinah({
         {/* Image */}
         <div className="w-full md:basis-[40%]">
           {/* Image */}
-          <div className="w-[270px] h-[120px] md:h-[300px] rounded-sm overflow-hidden shadow-sm ">
+          <div className="w-[270px] h-[120px] md:h-[300px] rounded-sm overflow-hidden  border-1 border-[#cccccc]">
             <Image
               src={image}
               alt={name}
