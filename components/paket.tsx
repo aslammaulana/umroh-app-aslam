@@ -39,11 +39,7 @@ export default function PaketUmrohList() {
     fetchPackages();
   }, []);
 
-  if (loading) return <div className="min-h-screen flex flex-col items-center justify-center gap-4">
-    <Spinner className="size-10" />
-    <p className="">Assalamualaikum</p>
-
-  </div>;
+  
 
   return (
     <div className="bg-gray-50 min-h-screen pb-20">
